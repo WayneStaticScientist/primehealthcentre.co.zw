@@ -1,4 +1,5 @@
 import { PHSConstants } from "@/utils/constants";
+import Link from "next/link";
 
 export const ServiceBlogLayout = ({
   descriptions,
@@ -102,30 +103,48 @@ export const ServiceBlogLayout = ({
               <div className="widget category">
                 <h5 className="widget-title">Core Services</h5>
                 <div className="category-list">
-                  <a href="#">
-                    <i className="far fa-arrow-right" />
+                  <Link
+                    href="/services/medical-surveillance"
+                    className="d-flex align-items-center gap-1"
+                  >
+                    <a className="far fa-arrow-right" />
                     Mobile Surveillance
-                  </a>
-                  <a href="#">
-                    <i className="far fa-arrow-right" />
+                  </Link>
+                  <Link
+                    href="/services/digital-x-ray"
+                    className="d-flex align-items-center gap-1"
+                  >
+                    <a className="far fa-arrow-right" />
                     Digital X-Rays
-                  </a>
-                  <a href="#">
-                    <i className="far fa-arrow-right" />
+                  </Link>
+                  <Link
+                    href="/services/audiometry"
+                    className="d-flex align-items-center gap-1"
+                  >
+                    <a className="far fa-arrow-right" />
                     Audiometry/Spirometry
-                  </a>
-                  <a href="#">
-                    <i className="far fa-arrow-right" />
+                  </Link>
+                  <Link
+                    href="/services/food-handler-exams"
+                    className="d-flex align-items-center gap-1"
+                  >
+                    <a className="far fa-arrow-right" />
                     Food Handler Exams
-                  </a>
-                  <a href="#">
-                    <i className="far fa-arrow-right" />
+                  </Link>
+                  <Link
+                    href="/services/wellness-clinics"
+                    className="d-flex align-items-center gap-1"
+                  >
+                    <a className="far fa-arrow-right" />
                     Wellness Clinics
-                  </a>
-                  <a href="#">
-                    <i className="far fa-arrow-right" />
+                  </Link>
+                  <Link
+                    href="/services/first-aid-training"
+                    className="d-flex align-items-center gap-1"
+                  >
+                    <a className="far fa-arrow-right" />
                     First Aid Training
-                  </a>
+                  </Link>
                 </div>
               </div>
 
