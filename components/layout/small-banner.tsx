@@ -7,7 +7,7 @@ export const SmallBanner = () => {
           <div className="col-12 col-md-6 col-lg-4">
             <div className="banner-item">
               <img
-                src="assets/img/banner/mini-banner-1.jpg"
+                src="/assets/img/banner/mini-banner-1.jpg"
                 alt="Vision Screening"
               />
               <div className="banner-content">
@@ -23,7 +23,10 @@ export const SmallBanner = () => {
           {/* Card 2: Audiometry & Spirometry */}
           <div className="col-12 col-md-6 col-lg-4">
             <div className="banner-item">
-              <img src="assets/img/banner/mini-banner-2.jpg" alt="Audiometry" />
+              <img
+                src="/assets/img/banner/mini-banner-2.jpg"
+                alt="Audiometry"
+              />
               <div className="banner-content">
                 <p>Worker Safety</p>
                 <h3>

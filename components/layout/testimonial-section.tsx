@@ -1,3 +1,38 @@
+"use client";
+import Carousel from "react-multi-carousel";
+import { FaHandHoldingMedical } from "react-icons/fa6";
+
+const TESTIMONIALS = [
+  {
+    id: 1,
+    name: "Bikita Minerals",
+    role: "Safety & Health Dept",
+    content:
+      "Prime Health Centre has been instrumental in ensuring our workforce remains fit-for-purpose. Their mobile medical surveillance is highly efficient and perfectly tailored for our mining site requirements.",
+  },
+  {
+    id: 2,
+    name: "Shamva Gold Mine",
+    role: "SHEQ Manager",
+    content:
+      "The professional conduct and expertise in Audiometry and Spirometry screenings provided by Prime Health have significantly improved our compliance standards and overall worker safety across the mine.",
+  },
+  {
+    id: 3,
+    name: "Kinsey Construction",
+    role: "Operations Director",
+    content:
+      "Reliable and professional partners. Their on-site medical examinations saved us significant downtime and costs. They are a trusted choice for maintaining high operational health standards in construction.",
+  },
+  {
+    id: 4,
+    name: "Gwebi College",
+    role: "Administration",
+    content:
+      "The team at Prime Health handled our staff medicals with extreme confidentiality and excellence. Their diagnostic reporting is clear, concise, and always delivered within our required institutional timeframes.",
+  },
+];
+
 export const TestimonialSection = () => {
   return (
     <div className="testimonial-area ts-bg py-80">
@@ -10,156 +45,57 @@ export const TestimonialSection = () => {
             <div className="site-heading text-center">
               <span className="site-title-tagline">Testimonials</span>
               <h2 className="site-title text-white">
-                What Our Client Say's <span>About Us</span>
+                What Our Clients Say <span>About Us</span>
               </h2>
             </div>
           </div>
         </div>
-        <div
-          className="testimonial-slider owl-carousel owl-theme wow fadeInUp"
-          data-wow-delay=".25s"
+
+        <Carousel
+          autoPlay={true}
+          autoPlaySpeed={2000}
+          infinite={true}
+          arrows={false}
+          responsive={{
+            superLargeDesktop: {
+              breakpoint: { max: 4000, min: 3000 },
+              items: 4,
+            },
+            desktop: { breakpoint: { max: 3000, min: 1024 }, items: 3 },
+            tablet: { breakpoint: { max: 1024, min: 464 }, items: 2 },
+            mobile: { breakpoint: { max: 464, min: 0 }, items: 1 },
+          }}
+          className="testimonial-slider wow fadeInUp gap-3"
         >
-          <div className="testimonial-item">
-            <div className="testimonial-author">
-              <div className="testimonial-author-img">
-                <img src="assets/img/testimonial/01.jpg" alt="" />
+          {TESTIMONIALS.map((item) => (
+            <div key={item.id} className="testimonial-item m-3">
+              <div className="testimonial-author">
+                <div className="testimonial-author-img flex items-center justify-center rounded-full p-2">
+                  {/* The animation class applied to a wrapper div */}
+                  <div className="animate-sweep">
+                    <FaHandHoldingMedical size={30} color="white" />
+                  </div>
+                </div>
+                <div className="testimonial-author-info">
+                  <h4>{item.name}</h4>
+                  <p>{item.role}</p>
+                </div>
               </div>
-              <div className="testimonial-author-info">
-                <h4>Sylvia H Green</h4>
-                <p>Customer</p>
+              <div className="testimonial-quote">
+                {/* Fixed height or min-height here helps keep cards uniform */}
+                <p className="min-h-[100px]">{item.content}</p>
               </div>
-            </div>
-            <div className="testimonial-quote">
-              <p>
-                There are many variations of long passages available but the
-                content majority have suffered to the editor page when looking
-                at its layout alteration in some injected.
-              </p>
-            </div>
-            <div className="testimonial-rate">
-              <i className="fas fa-star" />
-              <i className="fas fa-star" />
-              <i className="fas fa-star" />
-              <i className="fas fa-star" />
-              <i className="fas fa-star" />
-            </div>
-            <div className="testimonial-quote-icon">
-              <img src="assets/img/icon/quote.svg" alt="" />
-            </div>
-          </div>
-          <div className="testimonial-item">
-            <div className="testimonial-author">
-              <div className="testimonial-author-img">
-                <img src="assets/img/testimonial/02.jpg" alt="" />
+              <div className="testimonial-rate">
+                {[...Array(5)].map((_, i) => (
+                  <i key={i} className="fas fa-star" />
+                ))}
               </div>
-              <div className="testimonial-author-info">
-                <h4>Gordo Novak</h4>
-                <p>Customer</p>
+              <div className="testimonial-quote-icon">
+                <img src="assets/img/icon/quote.svg" alt="quote" />
               </div>
             </div>
-            <div className="testimonial-quote">
-              <p>
-                There are many variations of long passages available but the
-                content majority have suffered to the editor page when looking
-                at its layout alteration in some injected.
-              </p>
-            </div>
-            <div className="testimonial-rate">
-              <i className="fas fa-star" />
-              <i className="fas fa-star" />
-              <i className="fas fa-star" />
-              <i className="fas fa-star" />
-              <i className="fas fa-star" />
-            </div>
-            <div className="testimonial-quote-icon">
-              <img src="assets/img/icon/quote.svg" alt="" />
-            </div>
-          </div>
-          <div className="testimonial-item">
-            <div className="testimonial-author">
-              <div className="testimonial-author-img">
-                <img src="assets/img/testimonial/03.jpg" alt="" />
-              </div>
-              <div className="testimonial-author-info">
-                <h4>Reid E Butt</h4>
-                <p>Customer</p>
-              </div>
-            </div>
-            <div className="testimonial-quote">
-              <p>
-                There are many variations of long passages available but the
-                content majority have suffered to the editor page when looking
-                at its layout alteration in some injected.
-              </p>
-            </div>
-            <div className="testimonial-rate">
-              <i className="fas fa-star" />
-              <i className="fas fa-star" />
-              <i className="fas fa-star" />
-              <i className="fas fa-star" />
-              <i className="fas fa-star" />
-            </div>
-            <div className="testimonial-quote-icon">
-              <img src="assets/img/icon/quote.svg" alt="" />
-            </div>
-          </div>
-          <div className="testimonial-item">
-            <div className="testimonial-author">
-              <div className="testimonial-author-img">
-                <img src="assets/img/testimonial/04.jpg" alt="" />
-              </div>
-              <div className="testimonial-author-info">
-                <h4>Parker Jimenez</h4>
-                <p>Customer</p>
-              </div>
-            </div>
-            <div className="testimonial-quote">
-              <p>
-                There are many variations of long passages available but the
-                content majority have suffered to the editor page when looking
-                at its layout alteration in some injected.
-              </p>
-            </div>
-            <div className="testimonial-rate">
-              <i className="fas fa-star" />
-              <i className="fas fa-star" />
-              <i className="fas fa-star" />
-              <i className="fas fa-star" />
-              <i className="fas fa-star" />
-            </div>
-            <div className="testimonial-quote-icon">
-              <img src="assets/img/icon/quote.svg" alt="" />
-            </div>
-          </div>
-          <div className="testimonial-item">
-            <div className="testimonial-author">
-              <div className="testimonial-author-img">
-                <img src="assets/img/testimonial/05.jpg" alt="" />
-              </div>
-              <div className="testimonial-author-info">
-                <h4>Heruli Nez</h4>
-                <p>Customer</p>
-              </div>
-            </div>
-            <div className="testimonial-quote">
-              <p>
-                There are many variations of long passages available but the
-                content majority have suffered to the editor page when looking
-                at its layout alteration in some injected.
-              </p>
-            </div>
-            <div className="testimonial-rate">
-              <i className="fas fa-star" />
-              <i className="fas fa-star" />
-              <i className="fas fa-star" />
-              <i className="fas fa-star" />
-              <i className="fas fa-star" />
-            </div>
-            <div className="testimonial-quote-icon">
-              <img src="assets/img/icon/quote.svg" alt="" />
-            </div>
-          </div>
-        </div>
+          ))}
+        </Carousel>
       </div>
     </div>
   );

@@ -1,5 +1,5 @@
 "use client";
-
+import { MdVerified } from "react-icons/md";
 import { PHSConstants } from "@/utils/constants";
 
 export const HeroSlider = () => {
@@ -55,14 +55,13 @@ export const HeroSlider = () => {
                 <div className="hero-img">
                   {/* Use an image representing a medical professional or screening equipment */}
                   <img
-                    src="assets/img/hero/hero-1.png"
+                    src="/assets/img/hero/hero-1.png"
                     alt="Medical Screening Services"
                   />
                 </div>
-                <div className="hero-img-info">
+                <div className="hero-img-info animate-sweep">
                   <div className="icon">
-                    {/* Changed to a more relevant icon context */}
-                    <img src="assets/img/icon/check.svg" alt="Certified" />
+                    <MdVerified size={30} color="white" />
                   </div>
                   <h6>First Aid Training & Wellness Clinics Available</h6>
                 </div>

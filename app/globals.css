@@ -1,26 +1,43 @@
-@import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Sticky Header Logic */
+.sticky-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  background: #ffffff; /* White background when sticky */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* The shadow effect */
+  animation: fadeInDown 0.5s ease-in-out; /* Smooth entrance */
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* Ensure the navbar links stay visible on white background */
+.sticky-header .nav-link {
+  color: #333 !important;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@keyframes sweep {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-15px) rotate(10deg); /* Move up and tilt right */
+  }
+  100% {
+    transform: translateY(0) rotate(0deg); /* Back to start */
+  }
+}
+
+.animate-sweep {
+  animation: sweep 4s ease-in-out infinite;
 }

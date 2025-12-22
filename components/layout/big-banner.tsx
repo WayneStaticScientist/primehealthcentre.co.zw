@@ -10,14 +10,17 @@ export const BigBanner = () => {
             <div className="col-lg-8 mx-auto">
               <div className="banner-content">
                 <div className="banner-info">
-                  <h6>Mega Collections</h6>
+                  <h6>Our Mission & Vision</h6>
                   <h2>
-                    Huge Sale Up To <span>40%</span> Off
+                    Promoting a Safe and Healthy <span>Work Environment</span>
                   </h2>
-                  <p>at our outlet stores</p>
+                  <p>
+                    Combating the risk of work-related injuries while enhancing
+                    the well-being and productivity of your workers.
+                  </p>
                 </div>
-                <a href="#" className="theme-btn">
-                  Shop Now
+                <a href="#about" className="theme-btn">
+                  View Company Profile
                   <i className="fas fa-arrow-right" />
                 </a>
               </div>

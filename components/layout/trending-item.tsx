@@ -10,7 +10,7 @@ export const TrendingItem = () => {
     { title: "Spirometry (Lung Function)", img: "04.png", tag: "Occupational" },
     { title: "Digital X-Ray", img: "05.png", tag: "Advanced" },
     { title: "Food Handler Exams", img: "06.png", tag: "Compliance" },
-    { title: "First Aid Training", img: "01.png", tag: "Certification" },
+    { title: "First Aid Training", img: "07.png", tag: "Certification" },
   ];
 
   return (
@@ -50,7 +50,7 @@ export const TrendingItem = () => {
                   <span className="type new">{service.tag}</span>
                   <a href="#">
                     <img
-                      src={`assets/img/product/${service.img}`}
+                      src={`/assets/img/product/${service.img}`}
                       alt={service.title}
                     />
                   </a>

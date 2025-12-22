@@ -7,174 +7,120 @@ export const Footer = () => {
         <div className="footer-widget">
           <div className="container">
             <div className="row footer-widget-wrapper pt-100 pb-40">
-              <div className="col-md-6 col-lg-3">
+              {/* Column 1: About & Primary Contact */}
+              <div className="col-md-6 col-lg-4">
                 <div className="footer-widget-box about-us">
-                  <a href="index-2.html" className="footer-logo">
-                    <img src="assets/img/logo/logo-light.png" alt="" />
+                  <a href="/" className="footer-logo">
+                    <img
+                      src="assets/img/logo/logo-light.png"
+                      alt="Prime Health Centre Logo"
+                    />
                   </a>
                   <p className="mb-3">
-                    We are many variations of the passages available but the
-                    majoro have suffered alteration injected.
+                    Your premier partner in Occupational Health and Safety.
+                    Promoting productivity through prevention and professional
+                    medical surveillance.
                   </p>
                   <ul className="footer-contact">
                     <li>
-                      <a href="tel:+21236547898">
+                      <a href="tel:+263778247413">
                         <i className="far fa-phone" />
-                        +2 123 654 7898
+                        +263 77 824 7413 / +263 71 271 2701
                       </a>
                     </li>
                     <li>
-                      <i className="far fa-map-marker-alt" />
-                      25/B Milford Road, New York
-                    </li>
-                    <li>
-                      <a href="https://live.themewild.com/cdn-cgi/l/email-protection#a8c1c6cec7e8cdd0c9c5d8c4cd86cbc7c5">
-                        <i className="far fa-envelope" />
-                        <span
-                          className="__cf_email__"
-                          data-cfemail="ee87808881ae8b968f839e828bc08d8183"
-                        >
-                          [email&nbsp;protected]
-                        </span>
-                      </a>
+                      <i className="far fa-envelope" />
+                      primehealthcentre@gmail.com
                     </li>
                     <li>
                       <i className="far fa-clock" />
-                      Mon-Fri (9.00AM - 8.00PM)
+                      Mon-Fri (8:00 AM - 5:00 PM)
                     </li>
                   </ul>
                 </div>
               </div>
+
+              {/* Column 2: Our Locations (Slide 10) */}
+              <div className="col-md-6 col-lg-3">
+                <div className="footer-widget-box list">
+                  <h4 className="footer-widget-title">Our Clinics</h4>
+                  <ul className="footer-list">
+                    <li>
+                      <i className="fas fa-map-marker-alt text-white mr-2" />
+                      <strong>Main Clinic:</strong>
+                      <br />
+                      167 Samora Machel Eastlea, Harare
+                    </li>
+                    <li className="mt-3">
+                      <i className="fas fa-map-marker-alt text-white mr-2" />
+                      <strong>Satellite Clinic:</strong>
+                      <br />
+                      18 Coventry Rd, Workington, Harare
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              {/* Column 3: Core Services */}
+              <div className="col-md-6 col-lg-3">
+                <div className="footer-widget-box list">
+                  <h4 className="footer-widget-title">Medical Services</h4>
+                  <ul className="footer-list">
+                    <li>
+                      <a href="#">Medical Surveillance</a>
+                    </li>
+                    <li>
+                      <a href="#">Audiometry & Spirometry</a>
+                    </li>
+                    <li>
+                      <a href="#">Digital X-Rays</a>
+                    </li>
+                    <li>
+                      <a href="#">Food Handlers Exams</a>
+                    </li>
+                    <li>
+                      <a href="#">Wellness Programs</a>
+                    </li>
+                    <li>
+                      <a href="#">First Aid Training</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              {/* Column 4: Quick Links */}
               <div className="col-md-6 col-lg-2">
                 <div className="footer-widget-box list">
                   <h4 className="footer-widget-title">Quick Links</h4>
                   <ul className="footer-list">
                     <li>
-                      <a href="about.html">About Us</a>
+                      <a href="#about">About Us</a>
                     </li>
                     <li>
-                      <a href="help.html">Delivery Info</a>
+                      <a href="#testimonials">References</a>
                     </li>
                     <li>
-                      <a href="contact.html">Contact Us</a>
+                      <a href="#">Terms of Service</a>
                     </li>
                     <li>
-                      <a href="blog.html">Update News</a>
-                    </li>
-                    <li>
-                      <a href="testimonial.html">Our Testimonials</a>
-                    </li>
-                    <li>
-                      <a href="terms.html">Terms Of Service</a>
-                    </li>
-                    <li>
-                      <a href="privacy.html">Privacy policy</a>
+                      <a href="#">Privacy Policy</a>
                     </li>
                   </ul>
-                </div>
-              </div>
-              <div className="col-md-6 col-lg-2">
-                <div className="footer-widget-box list">
-                  <h4 className="footer-widget-title">Browse Category</h4>
-                  <ul className="footer-list">
-                    <li>
-                      <a href="shop-grid.html">Medicine</a>
-                    </li>
-                    <li>
-                      <a href="shop-grid.html">Medical Equipments</a>
-                    </li>
-                    <li>
-                      <a href="shop-grid.html">Beauty Care</a>
-                    </li>
-                    <li>
-                      <a href="shop-grid.html">Baby &amp; Mom Care</a>
-                    </li>
-                    <li>
-                      <a href="shop-grid.html">Healthcare</a>
-                    </li>
-                    <li>
-                      <a href="shop-grid.html">Food &amp; Nutrition</a>
-                    </li>
-                    <li>
-                      <a href="shop-grid.html">Medical Supplies</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div className="col-md-6 col-lg-2">
-                <div className="footer-widget-box list">
-                  <h4 className="footer-widget-title">Support Center</h4>
-                  <ul className="footer-list">
-                    <li>
-                      <a href="faq.html">FAQ's</a>
-                    </li>
-                    <li>
-                      <a href="help.html">How To Buy</a>
-                    </li>
-                    <li>
-                      <a href="help.html">Support Center</a>
-                    </li>
-                    <li>
-                      <a href="track-order.html">Track Your Order</a>
-                    </li>
-                    <li>
-                      <a href="return.html">Returns Policy</a>
-                    </li>
-                    <li>
-                      <a href="affiliate.html">Our Affiliates</a>
-                    </li>
-                    <li>
-                      <a href="contact.html">Sitemap</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div className="col-md-6 col-lg-3">
-                <div className="footer-widget-box list">
-                  <h4 className="footer-widget-title">Get Mobile App</h4>
-                  <p>
-                    Medica App is now available on App Store &amp; Google Play.
-                  </p>
-                  <div className="footer-download">
-                    <h5>Download Our Mobile App</h5>
-                    <div className="footer-download-btn">
-                      <a href="#">
-                        <i className="fab fa-google-play" />
-                        <div className="download-btn-info">
-                          <span>Get It On</span>
-                          <h6>Google Play</h6>
-                        </div>
-                      </a>
-                      <a href="#">
-                        <i className="fab fa-app-store" />
-                        <div className="download-btn-info">
-                          <span>Get It On</span>
-                          <h6>App Store</h6>
-                        </div>
-                      </a>
-                    </div>
-                  </div>
-                  <div className="footer-payment mt-20">
-                    <span>We Accept:</span>
-                    <img src="assets/img/payment/visa.svg" alt="" />
-                    <img src="assets/img/payment/mastercard.svg" alt="" />
-                    <img src="assets/img/payment/amex.svg" alt="" />
-                    <img src="assets/img/payment/discover.svg" alt="" />
-                    <img src="assets/img/payment/paypal.svg" alt="" />
-                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+
+        {/* Copyright Area */}
         <div className="copyright">
           <div className="container">
             <div className="copyright-wrap">
               <div className="row">
                 <div className="col-12 col-lg-6 align-self-center">
                   <p className="copyright-text">
-                    © Copyright <span id="date" />{" "}
-                    <a href="index-2.html"> Medion </a> All Rights Reserved.
+                    © Copyright {new Date().getFullYear()}{" "}
+                    <a href="/"> Prime Health Centre </a> All Rights Reserved.
                   </p>
                 </div>
                 <div className="col-12 col-lg-6 align-self-center">
@@ -184,13 +130,10 @@ export const Footer = () => {
                       <i className="fab fa-facebook-f" />
                     </a>
                     <a href="#">
-                      <i className="fab fa-x-twitter" />
-                    </a>
-                    <a href="#">
                       <i className="fab fa-linkedin-in" />
                     </a>
                     <a href="#">
-                      <i className="fab fa-youtube" />
+                      <i className="fab fa-whatsapp" />
                     </a>
                   </div>
                 </div>

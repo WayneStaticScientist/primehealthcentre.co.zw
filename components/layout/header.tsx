@@ -1,6 +1,25 @@
+"use client";
 import { PHSConstants } from "@/utils/constants";
+import Link from "next/link";
+import { useEffect, useState } from "react";
 
 export const Header = () => {
+  const [isSticky, setIsSticky] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // If we scroll more than the height of the top bar (usually ~50px)
+      if (window.scrollY > 60) {
+        setIsSticky(true);
+      } else {
+        setIsSticky(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <header className="header">
       {/* header top */}
@@ -26,62 +45,21 @@ export const Header = () => {
                   </ul>
                 </div>
               </div>
-              {/* <div className="col-12 col-md-6 col-lg-6 col-xl-7">
+              <div className="col-12 col-md-6 col-lg-6 col-xl-7">
                 <div className="header-top-right">
                   <ul className="header-top-list">
-                    <li>
-                      <a href="#">
-                        <i className="far fa-timer" /> Daily Deal
-                      </a>
-                    </li>
                     <li>
                       <div className="dropdown">
                         <a
                           href="#"
                           className="dropdown-toggle"
                           data-bs-toggle="dropdown"
-                          aria-expanded="false"
                         >
                           <i className="far fa-usd" /> USD
                         </a>
                         <div className="dropdown-menu">
                           <a className="dropdown-item" href="#">
                             USD
-                          </a>
-                          <a className="dropdown-item" href="#">
-                            EUR
-                          </a>
-                          <a className="dropdown-item" href="#">
-                            AUD
-                          </a>
-                          <a className="dropdown-item" href="#">
-                            CUD
-                          </a>
-                        </div>
-                      </div>
-                    </li>
-                    <li>
-                      <div className="dropdown">
-                        <a
-                          href="#"
-                          className="dropdown-toggle"
-                          data-bs-toggle="dropdown"
-                          aria-expanded="false"
-                        >
-                          <i className="far fa-globe-americas" /> EN
-                        </a>
-                        <div className="dropdown-menu">
-                          <a className="dropdown-item" href="#">
-                            EN
-                          </a>
-                          <a className="dropdown-item" href="#">
-                            FR
-                          </a>
-                          <a className="dropdown-item" href="#">
-                            DE
-                          </a>
-                          <a className="dropdown-item" href="#">
-                            RU
                           </a>
                         </div>
                       </div>
@@ -93,87 +71,75 @@ export const Header = () => {
                           <i className="fab fa-facebook" />
                         </a>
                         <a href="#">
-                          <i className="fab fa-x-twitter" />
-                        </a>
-                        <a href="#">
-                          <i className="fab fa-instagram" />
-                        </a>
-                        <a href="#">
                           <i className="fab fa-linkedin" />
+                        </a>
+                        <a href="#">
+                          <i className="fab fa-whatsapp" />
                         </a>
                       </div>
                     </li>
                   </ul>
                 </div>
-              </div> */}
+              </div>
             </div>
           </div>
         </div>
       </div>
-      {/* header top end */}
-      {/* navbar */}
-      <div className="main-navigation">
+
+      {/* navbar - Added Dynamic Class here */}
+      <div
+        className={`main-navigation ${isSticky ? "sticky-header" : ""}`}
+        style={{
+          transition: "all 0.3s ease-in-out",
+          width: "100%",
+          zIndex: 1000,
+        }}
+      >
         <nav className="navbar navbar-expand-lg">
           <div className="container position-relative">
-            <a className="navbar-brand">
+            <a className="navbar-brand" href="/">
               <img src="/assets/img/logo/logo.png" alt="logo" />
             </a>
-            <div className="mobile-menu-right">
-              <div className="mobile-menu-btn">
-                <a href="#" className="nav-right-link search-box-outer">
-                  <i className="far fa-search" />
-                </a>
 
-                <a href="shop-cart.html" className="nav-right-link">
-                  <i className="far fa-shopping-bag" />
-                  <span>5</span>
-                </a>
-              </div>
+            <div className="mobile-menu-right">
               <button
                 className="navbar-toggler"
                 type="button"
                 data-bs-toggle="offcanvas"
                 data-bs-target="#offcanvasNavbar"
-                aria-controls="offcanvasNavbar"
-                aria-label="Toggle navigation"
               >
                 <span />
                 <span />
                 <span />
               </button>
             </div>
+
             <div
               className="offcanvas offcanvas-start"
               tabIndex={-1}
               id="offcanvasNavbar"
-              aria-labelledby="offcanvasNavbarLabel"
             >
               <div className="offcanvas-header">
-                <a
-                  href="index-2.html"
-                  className="offcanvas-brand"
-                  id="offcanvasNavbarLabel"
-                >
+                <Link href="/" className="offcanvas-brand">
                   <img src="assets/img/logo/logo.png" alt="" />
-                </a>
+                </Link>
                 <button
                   type="button"
                   className="btn-close"
                   data-bs-dismiss="offcanvas"
-                  aria-label="Close"
                 />
               </div>
               <div className="offcanvas-body">
                 <ul className="navbar-nav justify-content-end flex-grow-1">
                   <li className="nav-item">
-                    <a className="nav-link" href="about.html">
+                    <Link className="nav-link" href="/">
                       Home
-                    </a>
+                    </Link>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="about.html">
+                    <Link className="nav-link" href="/about">
                       About
-                    </a>
+                    </Link>
                   </li>
                   <li className="nav-item dropdown">
                     <a
@@ -185,65 +151,74 @@ export const Header = () => {
                     </a>
                     <ul className="dropdown-menu fade-down">
                       <li>
-                        <a className="dropdown-item" href="about.html">
-                          Doctor Examination
-                        </a>
+                        <Link
+                          className="dropdown-item"
+                          href="/services/medical-surveillance"
+                        >
+                          Medical Surveillance
+                        </Link>
                       </li>
                       <li>
-                        <a className="dropdown-item" href="brand.html">
-                          Titmus Vision Screener
-                        </a>
-                      </li>
-                      <li>
-                        <a className="dropdown-item" href="brand.html">
+                        <Link
+                          className="dropdown-item"
+                          href="/services/audiometry"
+                        >
                           Audiometry
-                        </a>
+                        </Link>
                       </li>
                       <li>
-                        <a className="dropdown-item" href="brand.html">
+                        <Link
+                          className="dropdown-item"
+                          href="/services/spirometry"
+                        >
                           Spirometry
-                        </a>
+                        </Link>
                       </li>
                       <li>
-                        <a className="dropdown-item" href="brand.html">
-                          Titmus Vision Screener
-                        </a>
+                        <Link
+                          className="dropdown-item"
+                          href="/services/digital-x-ray"
+                        >
+                          Digital X-Ray
+                        </Link>
                       </li>
                       <li>
-                        <a className="dropdown-item" href="brand.html">
-                          Digital Xray
-                        </a>
-                      </li>
-                      <li>
-                        <a className="dropdown-item" href="brand.html">
+                        <Link
+                          className="dropdown-item"
+                          href="/services/food-handler-exams"
+                        >
                           Food Handler Exams
-                        </a>
+                        </Link>
                       </li>
                       <li>
-                        <a className="dropdown-item" href="brand.html">
+                        <Link
+                          className="dropdown-item"
+                          href="/services/wellness-clinics"
+                        >
                           Wellness Clinics
-                        </a>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          className="dropdown-item"
+                          href="/services/first-aid-training"
+                        >
+                          First Aid Training
+                        </Link>
                       </li>
                     </ul>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="about.html">
+                    <Link className="nav-link" href="/contact">
                       Contact Us
-                    </a>
+                    </Link>
                   </li>
                 </ul>
-                {/* nav-right */}
+
+                {/* Cleaned up nav-right (Removed Shopping Bag/Wishlist) */}
                 <div className="nav-right">
-                  <a href="#" className="nav-right-link search-box-outer">
-                    <i className="far fa-search" />
-                  </a>
-                  <a href="wishlist.html" className="nav-right-link">
-                    <i className="far fa-heart" />
-                    <span>2</span>
-                  </a>
-                  <a href="shop-cart.html" className="nav-right-link">
-                    <i className="far fa-shopping-bag" />
-                    <span>5</span>
+                  <a href="tel:+263778247413" className="theme-btn">
+                    Book Now <i className="fas fa-arrow-right" />
                   </a>
                 </div>
               </div>
@@ -251,7 +226,6 @@ export const Header = () => {
           </div>
         </nav>
       </div>
-      {/* navbar end */}
     </header>
   );
 };
