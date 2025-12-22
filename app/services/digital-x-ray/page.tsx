@@ -7,7 +7,7 @@ import { ServiceBlogLayout } from "@/components/super-layouts/service-blog";
 export default function DigitalXRay() {
   return (
     <React.Fragment>
-      <Header />
+      <Header page="digital-x-ray" />
       <main className="main">
         <BreadCrumb title={"Digital X-Ray"} />
         <ServiceBlogLayout

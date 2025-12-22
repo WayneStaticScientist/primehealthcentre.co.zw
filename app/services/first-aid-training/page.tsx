@@ -7,7 +7,7 @@ import { ServiceBlogLayout } from "@/components/super-layouts/service-blog";
 export default function FirstAidTraining() {
   return (
     <React.Fragment>
-      <Header />
+      <Header page="first-aid-training" />
       <main className="main">
         <BreadCrumb title={"First Aid Training"} />
         <ServiceBlogLayout

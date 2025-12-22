@@ -7,7 +7,7 @@ import { ServiceBlogLayout } from "@/components/super-layouts/service-blog";
 export default function FoodHandlerExams() {
   return (
     <React.Fragment>
-      <Header />
+      <Header page="food-handler-exams" />
       <main className="main">
         <BreadCrumb title={"Food Handler Exams"} />
         <ServiceBlogLayout

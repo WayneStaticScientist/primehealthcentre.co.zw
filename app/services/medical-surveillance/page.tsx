@@ -7,7 +7,7 @@ import { ServiceBlogLayout } from "@/components/super-layouts/service-blog";
 export default function AboutPage() {
   return (
     <React.Fragment>
-      <Header />
+      <Header page="medical-surveillance" />
       <main className="main">
         <BreadCrumb title={"Medical Surveillance"} />
         <ServiceBlogLayout

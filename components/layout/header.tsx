@@ -3,7 +3,7 @@ import { PHSConstants } from "@/utils/constants";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
-export const Header = () => {
+export const Header = ({ page }: { page?: string }) => {
   const [isSticky, setIsSticky] = useState(false);
 
   useEffect(() => {
@@ -120,7 +120,7 @@ export const Header = () => {
               id="offcanvasNavbar"
             >
               <div className="offcanvas-header">
-                <Link href="/" className="offcanvas-brand">
+                <Link href="/" className="offcanvas-brand ">
                   <img src="assets/img/logo/logo.png" alt="" />
                 </Link>
                 <button
@@ -132,12 +132,18 @@ export const Header = () => {
               <div className="offcanvas-body">
                 <ul className="navbar-nav justify-content-end flex-grow-1">
                   <li className="nav-item">
-                    <Link className="nav-link" href="/">
+                    <Link
+                      className={`nav-link ${page === "home" ? "active" : ""}`}
+                      href="/"
+                    >
                       Home
                     </Link>
                   </li>
                   <li className="nav-item">
-                    <Link className="nav-link" href="/about">
+                    <Link
+                      className={`nav-link ${page === "about" ? "active" : ""}`}
+                      href="/about"
+                    >
                       About
                     </Link>
                   </li>
@@ -152,7 +158,9 @@ export const Header = () => {
                     <ul className="dropdown-menu fade-down">
                       <li>
                         <Link
-                          className="dropdown-item"
+                          className={`dropdown-item ${
+                            page === "medical-surveillance" ? "active" : ""
+                          }`}
                           href="/services/medical-surveillance"
                         >
                           Medical Surveillance
@@ -160,7 +168,9 @@ export const Header = () => {
                       </li>
                       <li>
                         <Link
-                          className="dropdown-item"
+                          className={`dropdown-item ${
+                            page === "audiometry" ? "active" : ""
+                          }`}
                           href="/services/audiometry"
                         >
                           Audiometry
@@ -168,7 +178,9 @@ export const Header = () => {
                       </li>
                       <li>
                         <Link
-                          className="dropdown-item"
+                          className={`dropdown-item ${
+                            page === "spirometry" ? "active" : ""
+                          }`}
                           href="/services/spirometry"
                         >
                           Spirometry
@@ -176,7 +188,9 @@ export const Header = () => {
                       </li>
                       <li>
                         <Link
-                          className="dropdown-item"
+                          className={`dropdown-item ${
+                            page === "digital-x-ray" ? "active" : ""
+                          }`}
                           href="/services/digital-x-ray"
                         >
                           Digital X-Ray
@@ -184,7 +198,9 @@ export const Header = () => {
                       </li>
                       <li>
                         <Link
-                          className="dropdown-item"
+                          className={`dropdown-item ${
+                            page === "food-handler-exams" ? "active" : ""
+                          }`}
                           href="/services/food-handler-exams"
                         >
                           Food Handler Exams
@@ -192,7 +208,9 @@ export const Header = () => {
                       </li>
                       <li>
                         <Link
-                          className="dropdown-item"
+                          className={`dropdown-item ${
+                            page === "wellness-clinics" ? "active" : ""
+                          }`}
                           href="/services/wellness-clinics"
                         >
                           Wellness Clinics
@@ -200,7 +218,9 @@ export const Header = () => {
                       </li>
                       <li>
                         <Link
-                          className="dropdown-item"
+                          className={`dropdown-item ${
+                            page === "first-aid-training" ? "active" : ""
+                          }`}
                           href="/services/first-aid-training"
                         >
                           First Aid Training
@@ -209,7 +229,12 @@ export const Header = () => {
                     </ul>
                   </li>
                   <li className="nav-item">
-                    <Link className="nav-link" href="/contact">
+                    <Link
+                      className={`nav-link ${
+                        page === "contact" ? "active" : ""
+                      }`}
+                      href="/contact"
+                    >
                       Contact Us
                     </Link>
                   </li>
@@ -217,9 +242,9 @@ export const Header = () => {
 
                 {/* Cleaned up nav-right (Removed Shopping Bag/Wishlist) */}
                 <div className="nav-right">
-                  <a href="tel:+263778247413" className="theme-btn">
+                  <Link href="/contact" className="theme-btn">
                     Book Now <i className="fas fa-arrow-right" />
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

@@ -7,7 +7,7 @@ import { ContactLayout } from "@/components/layout/contact-layout";
 export default function AboutPage() {
   return (
     <React.Fragment>
-      <Header />
+      <Header page="contact" />
       <main className="main">
         <BreadCrumb title={"Contact Us"} />
         <ContactLayout />

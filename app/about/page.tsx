@@ -7,7 +7,7 @@ import React from "react";
 export default function AboutPage() {
   return (
     <React.Fragment>
-      <Header />
+      <Header page="about" />
       <main className="main">
         <BreadCrumb title={"About Us"} />
         <AboutLayout />
