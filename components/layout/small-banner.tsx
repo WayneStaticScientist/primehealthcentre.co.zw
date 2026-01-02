@@ -12,10 +12,12 @@ export const SmallBanner = () => {
               />
               <div className="banner-content">
                 <p>Diagnostic Services</p>
-                <h3>
-                  Titmus Vision <br /> Screener
-                </h3>
-                <a href="#services">Learn More</a>
+                <ul>
+                  <li>Doctor Consultations</li>
+                  <li>Imaging (XRAYS - USC) </li>
+                  <li>Echocardiography </li>
+                  <li>ECG </li>
+                </ul>
               </div>
             </div>
           </div>
@@ -29,10 +31,11 @@ export const SmallBanner = () => {
               />
               <div className="banner-content">
                 <p>Worker Safety</p>
-                <h3>
-                  Audiometry & <br /> Spirometry Exams
-                </h3>
-                <a href="#services">Discover Now</a>
+                <ul>
+                  <li>Audiometry</li>
+                  <li>Vision Screening </li>
+                  <li>Spirometry</li>
+                </ul>
               </div>
             </div>
           </div>
@@ -46,10 +49,10 @@ export const SmallBanner = () => {
               />
               <div className="banner-content">
                 <p>Regulatory Compliance</p>
-                <h3>
-                  Digital X-ray & <br /> Food Handler Exams
-                </h3>
-                <a href="#services">Book Now</a>
+                <ul>
+                  <li>Food handling</li>
+                  <li>Pneumoconiosis </li>
+                </ul>
               </div>
             </div>
           </div>

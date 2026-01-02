@@ -1,5 +1,5 @@
 "use client";
-import { PHSConstants } from "@/utils/constants";
+import { PHSConstants, services } from "@/utils/constants";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
@@ -38,8 +38,13 @@ export const Header = ({ page }: { page?: string }) => {
                     </li>
                     <li>
                       <a href={`tel:${PHSConstants.PhoneNumbers[0]}`}>
-                        <i className="far fa-headset" />{" "}
+                        <i className="fa-brands fa-whatsapp"></i>{" "}
                         {PHSConstants.PhoneNumbers[0]}
+                      </a>
+                    </li>
+                    <li>
+                      <a href={`tel:${PHSConstants.Calls[0]}`}>
+                        <i className="far fa-phone" /> {PHSConstants.Calls[0]}
                       </a>
                     </li>
                   </ul>
@@ -50,13 +55,6 @@ export const Header = ({ page }: { page?: string }) => {
                   <ul className="header-top-list">
                     <li>
                       <div className="dropdown">
-                        <a
-                          href="#"
-                          className="dropdown-toggle"
-                          data-bs-toggle="dropdown"
-                        >
-                          <i className="far fa-usd" /> USD
-                        </a>
                         <div className="dropdown-menu">
                           <a className="dropdown-item" href="#">
                             USD
@@ -156,76 +154,18 @@ export const Header = ({ page }: { page?: string }) => {
                       Services
                     </a>
                     <ul className="dropdown-menu fade-down">
-                      <li>
-                        <Link
-                          className={`dropdown-item ${
-                            page === "medical-surveillance" ? "active" : ""
-                          }`}
-                          href="/services/medical-surveillance"
-                        >
-                          Medical Surveillance
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          className={`dropdown-item ${
-                            page === "audiometry" ? "active" : ""
-                          }`}
-                          href="/services/audiometry"
-                        >
-                          Audiometry
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          className={`dropdown-item ${
-                            page === "spirometry" ? "active" : ""
-                          }`}
-                          href="/services/spirometry"
-                        >
-                          Spirometry
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          className={`dropdown-item ${
-                            page === "digital-x-ray" ? "active" : ""
-                          }`}
-                          href="/services/digital-x-ray"
-                        >
-                          Digital X-Ray
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          className={`dropdown-item ${
-                            page === "food-handler-exams" ? "active" : ""
-                          }`}
-                          href="/services/food-handler-exams"
-                        >
-                          Food Handler Exams
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          className={`dropdown-item ${
-                            page === "wellness-clinics" ? "active" : ""
-                          }`}
-                          href="/services/wellness-clinics"
-                        >
-                          Wellness Clinics
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          className={`dropdown-item ${
-                            page === "first-aid-training" ? "active" : ""
-                          }`}
-                          href="/services/first-aid-training"
-                        >
-                          First Aid Training
-                        </Link>
-                      </li>
+                      {services.map((service, index) => (
+                        <li key={index}>
+                          <Link
+                            className={`dropdown-item ${
+                              page === service.slug ? "active" : ""
+                            }`}
+                            href={`/services/${service.slug}`}
+                          >
+                            {service.name}
+                          </Link>
+                        </li>
+                      ))}
                     </ul>
                   </li>
                   <li className="nav-item">

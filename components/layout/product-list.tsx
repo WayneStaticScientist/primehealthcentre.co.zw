@@ -11,7 +11,7 @@ export const ProductList = () => {
               <div className="product-list-item">
                 <div className="product-list-img">
                   <a href="#">
-                    <img src="assets/img/product/01.png" alt="Audiometry" />
+                    <img src="/assets/img/product/03.png" alt="Audiometry" />
                   </a>
                 </div>
                 <div className="product-list-content">
@@ -32,7 +32,7 @@ export const ProductList = () => {
               <div className="product-list-item">
                 <div className="product-list-img">
                   <a href="#">
-                    <img src="assets/img/product/02.png" alt="Spirometry" />
+                    <img src="/assets/img/product/04.png" alt="Spirometry" />
                   </a>
                 </div>
                 <div className="product-list-content">
@@ -51,7 +51,7 @@ export const ProductList = () => {
               <div className="product-list-item">
                 <div className="product-list-img">
                   <a href="#">
-                    <img src="assets/img/product/03.png" alt="Vision" />
+                    <img src="/assets/img/product/02.png" alt="Vision" />
                   </a>
                 </div>
                 <div className="product-list-content">
@@ -75,7 +75,7 @@ export const ProductList = () => {
               <div className="product-list-item">
                 <div className="product-list-img">
                   <a href="#">
-                    <img src="assets/img/product/04.png" alt="X-Ray" />
+                    <img src="/assets/img/product/05.png" alt="X-Ray" />
                   </a>
                 </div>
                 <div className="product-list-content">
@@ -92,7 +92,7 @@ export const ProductList = () => {
               <div className="product-list-item">
                 <div className="product-list-img">
                   <a href="#">
-                    <img src="assets/img/product/05.png" alt="Food Handlers" />
+                    <img src="/assets/img/product/06.png" alt="Food Handlers" />
                   </a>
                 </div>
                 <div className="product-list-content">
@@ -109,7 +109,7 @@ export const ProductList = () => {
               <div className="product-list-item">
                 <div className="product-list-img">
                   <a href="#">
-                    <img src="assets/img/product/06.png" alt="Lab" />
+                    <img src="/assets/img/product/06.png" alt="Lab" />
                   </a>
                 </div>
                 <div className="product-list-content">
@@ -135,7 +135,7 @@ export const ProductList = () => {
               <div className="product-list-item">
                 <div className="product-list-img">
                   <a href="#">
-                    <img src="assets/img/product/07.png" alt="First Aid" />
+                    <img src="/assets/img/product/07.png" alt="First Aid" />
                   </a>
                 </div>
                 <div className="product-list-content">
@@ -152,7 +152,7 @@ export const ProductList = () => {
               <div className="product-list-item">
                 <div className="product-list-img">
                   <a href="#">
-                    <img src="assets/img/product/08.png" alt="Clinics" />
+                    <img src="/assets/img/product/08.png" alt="Clinics" />
                   </a>
                 </div>
                 <div className="product-list-content">
@@ -169,7 +169,10 @@ export const ProductList = () => {
               <div className="product-list-item">
                 <div className="product-list-img">
                   <a href="#">
-                    <img src="assets/img/product/09.png" alt="Pre-employment" />
+                    <img
+                      src="/assets/img/product/09.png"
+                      alt="Pre-employment"
+                    />
                   </a>
                 </div>
                 <div className="product-list-content">

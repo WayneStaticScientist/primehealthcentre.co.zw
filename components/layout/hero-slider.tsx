@@ -25,14 +25,16 @@ export const HeroSlider = () => {
                   data-animation="fadeInRight"
                   data-delay=".50s"
                 >
-                  Specialized <span>Medical Screening</span> & Wellness
-                  Solutions
+                  For all your <span>Medical </span> Solutions
                 </h1>
                 <p data-animation="fadeInLeft" data-delay=".75s">
-                  From <strong>Audiometry</strong> and{" "}
-                  <strong>Spirometry</strong> to <strong>Digital X-rays</strong>{" "}
-                  and <strong>Food Handler Exams</strong>, we provide expert
-                  services to protect your workers' health and safety.
+                  Comprehensive <strong> healthcare</strong> ranging from{" "}
+                  <strong>General doctor consultations</strong> to{" "}
+                  <strong>surgical procedure, </strong>{" "}
+                  <strong>
+                    baby vaccinations , industrial occupational health ,
+                    surveillance , wellness clinics and first aid training
+                  </strong>
                 </p>
                 <div
                   className="hero-btn"

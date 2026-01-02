@@ -1,3 +1,4 @@
+import { PHSConstants } from "@/utils/constants";
 import React from "react";
 
 export const Footer = () => {
@@ -23,14 +24,32 @@ export const Footer = () => {
                   </p>
                   <ul className="footer-contact">
                     <li>
-                      <a href="tel:+263778247413">
+                      <a href={`tel:${PHSConstants.PhoneNumbers[0]}`}>
+                        <i className="fa-brands fa-whatsapp"></i>
+                        {PHSConstants.PhoneNumbers.map((data, index) => (
+                          <React.Fragment key={index}>
+                            {data}{" "}
+                            {index < PHSConstants.PhoneNumbers.length - 1
+                              ? "/"
+                              : ""}
+                          </React.Fragment>
+                        ))}
+                      </a>
+                    </li>
+                    <li>
+                      <a href={`tel:${PHSConstants.Calls[0]}`}>
                         <i className="far fa-phone" />
-                        +263 77 824 7413 / +263 71 271 2701
+                        {PHSConstants.Calls.map((data, index) => (
+                          <React.Fragment key={index}>
+                            {data}{" "}
+                            {index < PHSConstants.Calls.length - 1 ? "/" : ""}
+                          </React.Fragment>
+                        ))}
                       </a>
                     </li>
                     <li>
                       <i className="far fa-envelope" />
-                      primehealthcentre@gmail.com
+                      {PHSConstants.Email}
                     </li>
                     <li>
                       <i className="far fa-clock" />
