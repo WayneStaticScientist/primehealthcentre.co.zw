@@ -64,17 +64,23 @@ export const Footer = () => {
                 <div className="footer-widget-box list">
                   <h4 className="footer-widget-title">Our Clinics</h4>
                   <ul className="footer-list">
-                    <li>
-                      <i className="fas fa-map-marker-alt text-white mr-2" />
+                    <li className="text-white">
+                      <i className="fas fa-map-marker-alt text-white mr-2" />{" "}
                       <strong>Main Clinic:</strong>
                       <br />
-                      167 Samora Machel Eastlea, Harare
+                      {PHSConstants.addresses[0]
+                        .split("\n")
+                        .splice(1)
+                        .join("\n")}
                     </li>
-                    <li className="mt-3">
-                      <i className="fas fa-map-marker-alt text-white mr-2" />
-                      <strong>Satellite Clinic:</strong>
+                    <li className="mt-3 text-white">
+                      <i className="fas fa-map-marker-alt text-white mr-2" />{" "}
+                      <strong>Bulawayo:</strong>
                       <br />
-                      18 Coventry Rd, Workington, Harare
+                      {PHSConstants.addresses[1]
+                        .split("\n")
+                        .splice(1)
+                        .join("\n")}
                     </li>
                   </ul>
                 </div>

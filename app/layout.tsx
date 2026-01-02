@@ -26,9 +26,35 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Prime Health Centre",
+  title: {
+    default: "Prime Health Centre",
+    template: "%s | Prime Health Centre",
+  },
   description:
-    "Your Health, Our Priority - Comprehensive Medical Services at Prime Health Centre",
+    "Leading provider of occupational health and comprehensive medical services.",
+  keywords: [
+    "Occupational Health",
+    "Medical Surveillance",
+    "Zimbabwe Health",
+    "Prime Health",
+  ],
+  authors: [{ name: "Prime Health Centre" }],
+  creator: "Prime Health Centre",
+  metadataBase: new URL("https://primehealthcentre.co.zw"),
+  openGraph: {
+    title: "Prime Health Centre | Occupational Health Excellence",
+    description:
+      "Expert medical surveillance, vision screening, and minor surgeries.",
+    url: "https://primehealthcentre.co.zw",
+    siteName: "Prime Health Centre",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Prime Health Centre",
+    description: "Leading provider in comprehensive health services.",
+  },
 };
 
 export default function RootLayout({

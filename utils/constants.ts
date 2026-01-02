@@ -3,6 +3,11 @@ export class PHSConstants {
   static readonly Email = "info@primehealthcentre.co.zw";
   static readonly PhoneNumbers = ["+263 733 115 935", "+263 716 951 941"];
   static readonly Calls = ["+263 716 951 941", "+263 778 247 413"];
+  static readonly addresses = [
+    "Main Branch\n373 Engineering Drive\nHarare",
+    "Bulawayo Branch\nSuite 24\nMater Dei Hospital",
+    "Harare\nNumber 20 Lanark \nBalgravia Harare",
+  ];
 }
 
 export const services = [

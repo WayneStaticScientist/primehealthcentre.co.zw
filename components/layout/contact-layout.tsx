@@ -1,4 +1,5 @@
 import { PHSConstants } from "@/utils/constants";
+import React from "react";
 
 export const ContactLayout = () => {
   return (
@@ -16,8 +17,17 @@ export const ContactLayout = () => {
                       </div>
                       <div className="contact-info-content">
                         <h5>Office Address</h5>
-                        {/* Static address from project context */}
-                        <p>Highfield, Harare, Zimbabwe</p>
+
+                        <p>
+                          {PHSConstants.addresses.map((data, index) => (
+                            <React.Fragment key={index}>
+                              <div>{data}</div>
+                              {index < PHSConstants.addresses.length - 1 && (
+                                <hr />
+                              )}
+                            </React.Fragment>
+                          ))}
+                        </p>
                       </div>
                     </div>
                   </div>
