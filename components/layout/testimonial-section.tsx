@@ -91,7 +91,7 @@ export const TestimonialSection = () => {
                 ))}
               </div>
               <div className="testimonial-quote-icon">
-                <img src="assets/img/icon/quote.svg" alt="quote" />
+                <img src="/assets/img/icon/quote.svg" alt="quote" />
               </div>
             </div>
           ))}

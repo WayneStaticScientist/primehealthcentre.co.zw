@@ -119,7 +119,7 @@ export const Header = ({ page }: { page?: string }) => {
             >
               <div className="offcanvas-header">
                 <Link href="/" className="offcanvas-brand ">
-                  <img src="assets/img/logo/logo.png" alt="" />
+                  <img src="/assets/img/logo/logo.png" alt="" />
                 </Link>
                 <button
                   type="button"

@@ -13,7 +13,7 @@ export const Footer = () => {
                 <div className="footer-widget-box about-us">
                   <a href="/" className="footer-logo">
                     <img
-                      src="assets/img/logo/logo-light.png"
+                      src="/assets/img/logo/logo-light.png"
                       alt="Prime Health Centre Logo"
                     />
                   </a>

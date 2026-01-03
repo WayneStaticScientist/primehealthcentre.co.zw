@@ -56,11 +56,13 @@ export const HeroSlider = () => {
                   For all your <span>Medical </span> Solutions
                 </h1>
                 <p data-animation="fadeInLeft" data-delay=".75s">
-                  Comprehensive <strong> healthcare</strong> ranging from{" "}
-                  <strong>General doctor consultations</strong> to{" "}
-                  <strong>min surgical procedures </strong>{" "}
+                  Comprehensive <strong> healthcare services</strong> ranging
+                  from <strong>General doctor consultations</strong>,
                   <strong>
-                    Industrial Occupational health , surveillance , wellness
+                    minor surgical procedures , baby vaccinations .{" "}
+                  </strong>
+                  <strong>
+                    Industrial Occupational health surveillance , wellness
                     clinics and First Aid Training
                   </strong>
                 </p>
@@ -93,7 +95,7 @@ export const HeroSlider = () => {
                   />
                 </div>
                 <div className="hero-img-info animate-sweep">
-                  <div className="icon">
+                  <div className="icon tw:flex tw:items-center! tw:justify-center">
                     <MdVerified size={30} color="white" />
                   </div>
                   <h6>First Aid Training & Wellness Clinics Available</h6>

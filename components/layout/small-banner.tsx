@@ -14,7 +14,7 @@ export const SmallBanner = () => {
                 <p>Diagnostic Services</p>
                 <ul>
                   <li>Doctor Consultations</li>
-                  <li>Imaging (XRAYS - USC) </li>
+                  <li>Imaging (XRAYS - USS) </li>
                   <li>Echocardiography </li>
                   <li>ECG </li>
                 </ul>
@@ -44,7 +44,7 @@ export const SmallBanner = () => {
           <div className="col-12 col-md-6 col-lg-4">
             <div className="banner-item">
               <img
-                src="assets/img/banner/mini-banner-3.jpg"
+                src="/assets/img/banner/mini-banner-3.jpg"
                 alt="Digital X-ray"
               />
               <div className="banner-content">

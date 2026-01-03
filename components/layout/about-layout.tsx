@@ -33,7 +33,7 @@ export const AboutLayout = () => {
                 </b>
               </div>
               <div className="about-shape">
-                <img src="assets/img/shape/01.png" alt="" />
+                <img src="/assets/img/shape/01.png" alt="" />
               </div>
             </div>
           </div>
