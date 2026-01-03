@@ -1,3 +1,5 @@
+@import "tailwindcss" prefix(tw);
+
 /* Sticky Header Logic */
 .sticky-header {
   position: fixed;

@@ -1,0 +1,124 @@
+/* PHCDialog.module.css */
+
+/* Variables for easy theming */
+.dialog {
+  --dialog-bg: #ffffff;
+  --dialog-text: #1f2937;
+  --dialog-radius: 16px;
+  --overlay-bg: rgba(0, 0, 0, 0.4);
+  --primary-color: #3b82f6;
+  --transition-speed: 0.3s;
+}
+
+/* Dark mode support via simple media query or :global(.dark) */
+@media (prefers-color-scheme: dark) {
+  .dialog {
+    --dialog-bg: #1a1a1a;
+    --dialog-text: #f3f4f6;
+    --overlay-bg: rgba(0, 0, 0, 0.7);
+  }
+}
+
+/* The Native Dialog Reset & Base Styles */
+.dialog {
+  padding: 0;
+  border: none;
+  border-radius: var(--dialog-radius);
+  background: var(--dialog-bg);
+  color: var(--dialog-text);
+
+  /* Modern Shadows & Dimensions */
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+  width: 90%;
+  max-width: 500px;
+  position: fixed; /* Ensures centering */
+  inset: 0;
+  margin: auto;
+  overflow: hidden; /* Clips content to rounded corners */
+}
+
+/* Backdrop Styling (The overlay) */
+.dialog::backdrop {
+  background: var(--overlay-bg);
+  backdrop-filter: blur(4px); /* Glass effect */
+  opacity: 0;
+  transition: opacity var(--transition-speed) ease;
+}
+
+/* Open State Animations */
+.dialog[open] {
+  animation: slideUp var(--transition-speed) ease-out forwards;
+}
+
+.dialog[open]::backdrop {
+  opacity: 1;
+  animation: fadeIn var(--transition-speed) ease-out forwards;
+}
+
+/* Internal Layout */
+.container {
+  padding: 24px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.1);
+}
+
+.title {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+}
+
+.closeButton {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #9ca3af;
+  transition: all 0.2s;
+}
+
+.closeButton:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+  color: #4b5563;
+}
+
+.content {
+  line-height: 1.6;
+  color: inherit;
+  opacity: 0.9;
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}

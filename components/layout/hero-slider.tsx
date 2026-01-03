@@ -1,10 +1,38 @@
 "use client";
 import { MdVerified } from "react-icons/md";
-import { PHSConstants } from "@/utils/constants";
+import { PHSConstants, services } from "@/utils/constants";
+import PHCDialog from "./dialog-layout";
+import { useState } from "react";
+import { BiCaretRight } from "react-icons/bi";
 
 export const HeroSlider = () => {
+  const [servicesDialog, setServicesDialog] = useState(false);
   return (
     <div className="hero-section hs-1">
+      <PHCDialog
+        title="Services"
+        isOpen={servicesDialog}
+        onClose={() => setServicesDialog(false)}
+        children={
+          <ul>
+            {services.map((service, index) => (
+              <li
+                onClick={() => {
+                  window.location.href = "/services/" + service.slug;
+                }}
+                style={{
+                  cursor: "pointer",
+                  padding: "10px",
+                }}
+                key={index}
+                className="tw:hover:bg-[#e6e6e620]! tw:flex! tw:items-center!"
+              >
+                <BiCaretRight /> {service.name}
+              </li>
+            ))}
+          </ul>
+        }
+      />
       <div
         className="hero-single"
         style={{ backgroundImage: "url(/assets/img/hero/bg.png)" }}
@@ -41,11 +69,14 @@ export const HeroSlider = () => {
                   data-animation="fadeInUp"
                   data-delay="1s"
                 >
-                  <a href="#services" className="theme-btn">
+                  <div
+                    onClick={() => setServicesDialog(true)}
+                    className="theme-btn tw:cursor-pointer"
+                  >
                     View Medical Services
                     <i className="fas fa-arrow-right" />
-                  </a>
-                  <a href="#contact" className="theme-btn theme-btn2">
+                  </div>
+                  <a href="/contact" className="theme-btn theme-btn2">
                     Book an Exam
                     <i className="fas fa-arrow-right" />
                   </a>
