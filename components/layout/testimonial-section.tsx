@@ -6,30 +6,30 @@ const TESTIMONIALS = [
   {
     id: 1,
     name: "Bikita Minerals",
-    role: "Safety & Health Dept",
+    role: "SHE Management",
     content:
       "Prime Health Centre has been instrumental in ensuring our workforce remains fit-for-purpose. Their mobile medical surveillance is highly efficient and perfectly tailored for our mining site requirements.",
   },
   {
     id: 2,
-    name: "Shamva Gold Mine",
-    role: "SHEQ Manager",
+    name: "Golden Sun Resources",
+    role: "SHE Management",
     content:
       "The professional conduct and expertise in Audiometry and Spirometry screenings provided by Prime Health have significantly improved our compliance standards and overall worker safety across the mine.",
   },
   {
     id: 3,
-    name: "Kinsey Construction",
-    role: "Operations Director",
+    name: "Kinsey PVT LTD",
+    role: "SHE Management",
     content:
       "Reliable and professional partners. Their on-site medical examinations saved us significant downtime and costs. They are a trusted choice for maintaining high operational health standards in construction.",
   },
   {
     id: 4,
-    name: "Gwebi College",
-    role: "Administration",
+    name: "Nestle Zimababwe",
+    role: "SHE Management",
     content:
-      "The team at Prime Health handled our staff medicals with extreme confidentiality and excellence. Their diagnostic reporting is clear, concise, and always delivered within our required institutional timeframes.",
+      "Prime Health Centre provides exceptional support in maintaining our stringent food safety and employee health protocols. Their comprehensive medical screenings ensure our production teams meet the highest international health standards.",
   },
 ];
 
