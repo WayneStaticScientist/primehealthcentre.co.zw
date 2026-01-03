@@ -30,10 +30,10 @@ export const HeroSlider = () => {
                 <p data-animation="fadeInLeft" data-delay=".75s">
                   Comprehensive <strong> healthcare</strong> ranging from{" "}
                   <strong>General doctor consultations</strong> to{" "}
-                  <strong>surgical procedure, </strong>{" "}
+                  <strong>min surgical procedures </strong>{" "}
                   <strong>
-                    baby vaccinations , industrial occupational health ,
-                    surveillance , wellness clinics and first aid training
+                    Industrial Occupational health , surveillance , wellness
+                    clinics and First Aid Training
                   </strong>
                 </p>
                 <div
