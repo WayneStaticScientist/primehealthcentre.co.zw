@@ -1,4 +1,6 @@
 export class PHSConstants {
+  static readonly FACEBOOK_PAGE =
+    "https://www.facebook.com/profile.php?id=61586005652790";
   static readonly COMPANY_NAME = "Prime Health Centre";
   static readonly Email = "info@primehealthcentre.co.zw";
   static readonly PhoneNumbers = ["+263 733 115 935", "+263 716 951 941"];

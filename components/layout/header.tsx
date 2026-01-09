@@ -65,7 +65,7 @@ export const Header = ({ page }: { page?: string }) => {
                     <li className="social">
                       <div className="header-top-social">
                         <span>Follow Us: </span>
-                        <a href="#">
+                        <a href={`${PHSConstants.FACEBOOK_PAGE}`}>
                           <i className="fab fa-facebook" />
                         </a>
                         <a href="#">

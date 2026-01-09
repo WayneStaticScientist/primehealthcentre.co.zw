@@ -151,7 +151,7 @@ export const Footer = () => {
                 <div className="col-12 col-lg-6 align-self-center">
                   <div className="footer-social">
                     <span>Follow Us:</span>
-                    <a href="#">
+                    <a href={`${PHSConstants.FACEBOOK_PAGE}`}>
                       <i className="fab fa-facebook-f" />
                     </a>
                     <a href="#">
