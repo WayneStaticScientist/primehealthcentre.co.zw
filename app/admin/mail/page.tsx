@@ -30,7 +30,7 @@ export default function App() {
       let { html } = data;
       const footerImage = `
       <div style="text-align: center; margin-top: 20px;">
-        <img src="https://primehealthcentre.co.zw/opengraph-image.png" alt="Footer Image" style="max-width: 100%; height: auto;" />
+        <img src="https://primehealthcentre.co.zw/opengraph-image.png" alt="Footer Image" style="width: 120px; height: 63;" />
       </div>
     `;
       html = html.replace("</body>", `${footerImage}</body>`);
