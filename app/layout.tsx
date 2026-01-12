@@ -14,6 +14,7 @@ import "./assets/css/jquery-ui.min.css";
 import "./assets/css/owl.carousel.min.css";
 import "./assets/css/magnific-popup.min.css";
 import Script from "next/script";
+import { ToastContainer } from "react-toastify";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -67,6 +68,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased home-2`}
       >
+        <ToastContainer />
         {children}
         <Script
           src="/assets/js/modernizr.min.js"
