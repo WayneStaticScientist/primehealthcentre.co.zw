@@ -112,7 +112,7 @@ export default function App() {
           </div>
           <div>
             <h1 className="tw:text-lg tw:font-bold tw:text-slate-900 tw:leading-none">
-              Email Designer
+              PrimeHealthEmail
             </h1>
             <p className="tw:text-[11px] tw:text-slate-500 tw:mt-1 tw:uppercase tw:tracking-wider tw:font-semibold">
               Campaign Builder
