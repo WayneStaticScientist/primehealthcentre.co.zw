@@ -37,8 +37,8 @@ export default function App() {
       setSending(true);
       const result = await sendMail({
         body: html,
-        reccipient: "vanderlinkinchat@gmail.com",
-        subject: "Greetings From HIM",
+        reccipient:email ,
+        subject: subject,
       });
       setSending(false);
       if (result.success) {
