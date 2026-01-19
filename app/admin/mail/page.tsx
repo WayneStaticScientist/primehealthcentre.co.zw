@@ -52,18 +52,29 @@ export default function App() {
       try {
         let { html } = data;
         const footerImage = `
-          <div style="text-align: start; margin-top: 20px;">
-           <div style="flex-direction: row; align-items: center;gap: 14px;">
-           <img src="https://primehealthcentre.co.zw/opengraph-image.png" alt="Footer Image" style="width: 100%; height: auto;" />
-            <img src="https://primehealthcentre.co.zw/scope.png" alt="Footer Image" style="width: 50%; height: auto;" />
-            </div>
-             <a href="${PHSConstants.website}" style="display: block; margin-top: 10px; color: #0000EE; text-decoration: none;">${PHSConstants.website}</a>
-            <div>373 Engineering Drive</div>
-            <div>Harare</div>
-            <br/>
-           
-          </div>
-        `;
+  <div style="text-align: start; margin-top: 20px; font-family: sans-serif;">
+    <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td style="vertical-align: middle;">
+          <img src="https://primehealthcentre.co.zw/opengraph-image.png" 
+               alt="Logo" 
+               style="width: 120px; height: auto; display: block; margin-right: 14px;" />
+        </td>
+        <td style="vertical-align: middle;">
+          <img src="https://primehealthcentre.co.zw/scope.png" 
+               alt="Scope" 
+               style="width: 120px; height: auto; display: block;" />
+        </td>
+      </tr>
+    </table>
+    
+    <a href="${PHSConstants.website}" style="display: block; margin-top: 10px; color: #0000EE; text-decoration: none;">
+      ${PHSConstants.website}
+    </a>
+    <div style="color: #333333;">373 Engineering Drive</div>
+    <div style="color: #333333;">Harare</div>
+  </div>
+`;
         html = html.replace("</body>", `${footerImage}</body>`);
 
         let attachments = [];
