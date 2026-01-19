@@ -58,8 +58,9 @@ export default function App() {
             <div>373 Engineering Drive</div>
             <div>Harare</div>
             <br/>
-            <img src="https://primehealthcentre.co.zw/scope.png" alt="Footer Image" style="width: 100%; height: auto;" />
-
+            <div style="flex-direction: row; align-items: center;">
+            <img src="https://primehealthcentre.co.zw/scope.png" alt="Footer Image" style="width: 50%; height: auto;" />
+            </div>
           </div>
         `;
         html = html.replace("</body>", `${footerImage}</body>`);
