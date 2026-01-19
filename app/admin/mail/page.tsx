@@ -53,14 +53,15 @@ export default function App() {
         let { html } = data;
         const footerImage = `
           <div style="text-align: start; margin-top: 20px;">
-            <img src="https://primehealthcentre.co.zw/opengraph-image.png" alt="Footer Image" style="width: 120px; height: auto;" />
-            <a href="${PHSConstants.website}" style="display: block; margin-top: 10px; color: #0000EE; text-decoration: none;">${PHSConstants.website}</a>
+           <div style="flex-direction: row; align-items: center;gap: 14px;">
+           <img src="https://primehealthcentre.co.zw/opengraph-image.png" alt="Footer Image" style="width: 100%; height: auto;" />
+            <img src="https://primehealthcentre.co.zw/scope.png" alt="Footer Image" style="width: 50%; height: auto;" />
+            </div>
+             <a href="${PHSConstants.website}" style="display: block; margin-top: 10px; color: #0000EE; text-decoration: none;">${PHSConstants.website}</a>
             <div>373 Engineering Drive</div>
             <div>Harare</div>
             <br/>
-            <div style="flex-direction: row; align-items: center;">
-            <img src="https://primehealthcentre.co.zw/scope.png" alt="Footer Image" style="width: 50%; height: auto;" />
-            </div>
+           
           </div>
         `;
         html = html.replace("</body>", `${footerImage}</body>`);
