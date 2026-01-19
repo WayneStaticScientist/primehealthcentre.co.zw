@@ -179,7 +179,14 @@ export default function App() {
           <div className="tw:p-2 tw:bg-blue-600 tw:rounded-lg">
             <Mail className="tw:text-white" size={20} />
           </div>
-          <h1 className="tw:text-lg tw:font-bold">Email Designer</h1>
+          <div>
+            <h1 className="tw:text-lg tw:font-bold tw:text-slate-900 tw:leading-none">
+              PrimeHealthEmail
+            </h1>
+            <p className="tw:text-[11px] tw:text-slate-500 tw:mt-1 tw:uppercase tw:tracking-wider tw:font-semibold">
+              #madebyprimehealth_centre
+            </p>
+          </div>
         </div>
 
         <button
