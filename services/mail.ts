@@ -1,15 +1,20 @@
 "use server";
+import nodemailer from "nodemailer";
+
 const transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
     user: process.env.EMAIL,
-    pass: process.env.PASSWORRD, // The 16-digit App Password you generated
+    pass: process.env.PASSWORRD,
   },
 });
+
 export const sendMail = async (data: {
   body: string;
   reccipient: string;
   subject: string;
+  // New attachment field
+  attachments?: { filename: string; content: string }[];
 }): Promise<{ success?: boolean | null; message: string }> => {
   try {
     await transporter.sendMail({
@@ -17,10 +22,15 @@ export const sendMail = async (data: {
       to: data.reccipient,
       subject: data.subject,
       html: data.body,
+      // Pass attachments to nodemailer
+      attachments: data.attachments?.map((att) => ({
+        filename: att.filename,
+        content: att.content,
+        encoding: "base64", // Crucial for sending strings
+      })),
     });
     return { message: `sent`, success: true };
   } catch (e) {
-    return { message: `failed to send mnail : ${e}` };
+    return { message: `failed to send mail: ${e}`, success: false };
   }
 };
-import nodemailer from "nodemailer";

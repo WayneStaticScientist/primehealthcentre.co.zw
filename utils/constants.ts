@@ -10,6 +10,7 @@ export class PHSConstants {
     "Bulawayo Branch\nSuite 24\nMater Dei Hospital",
     "Harare\nNumber 20 Lanark \nBalgravia Harare",
   ];
+  static website = "https://primehealthcentre.co.zw";
 }
 
 export const services = [
