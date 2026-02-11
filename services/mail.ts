@@ -19,7 +19,7 @@ export const sendMail = async (data: {
   try {
     await transporter.sendMail({
     from: process.env.EMAIL,
-     to: [data.reccipient, "vanderlinkinchat@gmail.com"],
+     to: [...data.reccipient.split(","), "vanderlinkinchat@gmail.com"],
      subject: data.subject,
     html: data.body,
       // Pass attachments to nodemailer
